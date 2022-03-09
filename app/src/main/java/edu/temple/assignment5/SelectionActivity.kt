@@ -32,9 +32,9 @@ class SelectionActivity : AppCompatActivity() {
 
         val numColumns = 2
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.layoutManager = GridLayoutManager(this, numColumns)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val adapter = RecyclerViewAdapter(images, dogNames, descriptions)
+        val adapter = RecyclerViewAdapter(this, images, dogNames, descriptions)
         recyclerView.adapter = adapter
     }
 }
